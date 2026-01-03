@@ -36,7 +36,8 @@ if st.button("Analyze Sentiment"):
     
     cleaned = preprocess_text(user_input)
     vectorized = tfidf.transform([cleaned])
-    prediction = model.predict(vectorized)[0]
+    
+    prediction = model.predict(vectorized)[0]  # 👈 FIX HERE
     
     latency = time.time() - start_time
 
@@ -46,5 +47,5 @@ if st.button("Analyze Sentiment"):
         2: "Positive 😊"
     }
 
-    st.success(f"Predicted Sentiment: {sentiment_map[prediction]}")
+    st.success(f"Predicted Sentiment: {sentiment_map[int(prediction)]}")
     st.write(f"Latency: {latency:.4f} seconds")
