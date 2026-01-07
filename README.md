@@ -53,6 +53,3 @@ The system allows users to input tweet text and instantly receive sentiment feed
 - Streamlit  
 - GitHub & Streamlit Cloud  
 
----
-
-## 📂 Project Structure
